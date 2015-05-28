@@ -1,0 +1,16 @@
+<h3>You are viewing: {{photo_name}}</h3>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+       Album Name: {{album_name}}
+        <a href="index.html#/albums/{{album_name}}" style="float: right">
+            <button type="button" class="btn btn-success">Back to album</button>
+        </a>
+
+    </div>
+    <div class="panel-body" >
+        <div class="photo_holder" style="float: left; border: 1px solid #ddd; border-radius: 4px; padding: 3px;">
+            <img ng-src="/media/{{album_name}}/full/{{photo_name}}" border="0" style="height:500px;width: 500px"/>
+        </div>
+    </div>
+</div>

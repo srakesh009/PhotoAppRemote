@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Using Angular JS directives</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body style="Padding:50px" ng-init="greeting={name:'Rakesh',message:'Hello World'}">
+<div class="alert alert-info" role="alert">
+    <p>
+        <input type="text" ng-model="greeting.name" size="10"><br>
+        <input type="text" ng-model="greeting.message" size="10">
+    </p>
+    {{greeting.name}} says: Everybody wanna shout {{greeting.message}}
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<a href="index.html#/albums" style="font-size: large">
+    Home
+</a><br/><br/>
+
+
+<div style="padding: 50px">
+    <h5 ng-show="temp">Name:{{album_name}}</h5>
+    <h5 ng-show="temp">Description:{{current_album.description}}</h5>
+<div class="alert alert-danger" ng-show="page_loading_error">
+    {{page_loading_error}}
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat="photo in photos">
+            <div class="thumbnail">
+                <a href="index.html#/albums/{{album_name}}/photos/{{photo.filename}}" class="thumbnail">
+
+                    <img src="/media/{{album_name}}/thumb/{{photo.filename}}"/>
+                </a>
+                <div class="caption">
+                    <h3>{{photo.description}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a href="index.html#/album/{{album_name}}/upload" ng-show="temp">
+        <button type="button" class="btn btn-success">Add files to this album</button>
+    </a>
+    <a href="index.html#/albums/{{album_name}}/edit" ng-show="temp">
+        <button type="button" class="btn btn-success">Edit Album</button>
+    </a>
+
+
+</div>

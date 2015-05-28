@@ -1,0 +1,30 @@
+<div class="alert alert-danger" role="alert" ng-show="page_load_error">
+    {{page_load_error}}
+</div>
+
+<div class="editBlock" ng-show="temp">
+    <div class="edit_album panel panel-primary">
+            <form name="edit_album_form" novalidate>
+                   <div class="alert alert-danger" role="alert" ng-show="edit_album_error">
+                    {{edit_album_error}}
+                   </div>
+                <div class="panel-heading">
+                    <input type="text"  ng-model="editAlbum_before.title" value="{{editAlbum_before.title}}"/>
+                    <div  style="float: right">
+                        <input type="text" ng-model="editAlbum_before.date " value="{{editAlbum_before.date}}"/>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <textarea ng-model="editAlbum_before.description" value="{{editAlbum_before.description}}" rows='4' style="width: 100%"></textarea>
+                    </p>
+                    <p>
+                        <input type="text" ng-model="editAlbum_before.name" ng-readonly="true" value="{{editAlbum_before.name}}" style="width: 100%"/>
+                    </p>
+                    <button ng-click="editAlbum(editAlbum_before)" type="button" class="btn btn-success">Submit</button>
+
+                </div>
+            </form>
+        </div>
+    </form>
+</div>

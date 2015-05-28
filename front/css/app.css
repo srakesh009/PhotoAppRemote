@@ -1,0 +1,49 @@
+input[type=text]{
+    padding: 3px;
+    border-radius: 4px;
+    border: solid 1px #bbb;
+    position: relative;
+}
+
+textarea{
+    padding: 3px;
+    border-radius: 4px;
+    border: solid 1px #bbb;
+}
+
+div.album{
+    float: left;
+    width: 300px;
+    margin-right: 10px;
+    min-height: 200px;
+}
+
+div.new_album{
+    float: left;
+    width: 400px;
+    margin-right: 10px;
+    min-height: 200px;
+}
+
+.editBlock{
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+div.edit_album{
+    float: left;
+    width: 400px;
+    margin-right: 10px;
+    min-height: 200px;
+}
+
+.panel-heading{
+    background-color: rgba(149, 147, 147, 0.6);
+
+}
+
+div.album div.panel-heading a{
+    color:white;
+}
+
+div.row

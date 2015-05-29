@@ -1,0 +1,14 @@
+<div class='album panel panel-primary'>
+    <div class="panel-heading">
+        <a href="/index.html#/albums/{{albumdata.name}}" >
+            {{albumdata.title}}
+        </a>
+        <div style="float: right">
+            {{albumdata.date}}
+        </div>
+
+    </div>
+    <div class="panel-body" my-Red>
+        {{albumdata.description | my_uppercase}}
+    </div>
+</div>

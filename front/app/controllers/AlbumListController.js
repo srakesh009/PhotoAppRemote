@@ -1,8 +1,9 @@
-app.controller('AlbumListController',function($scope,albumProvider,$location) {
+app.controller('AlbumListController',function($scope,albumProvider,$location,$cookieStore) {
     $scope.new_album = {};
     $scope.add_album_error = "";
     $scope.page_load_error="";
     $scope.loading_not_done="true";
+    //$scope.last_album_created=$cookieStore.get('last_album_created');
 
     albumProvider.getAlbums(function(err,albums){
           if(err){
@@ -48,7 +49,7 @@ app.controller('AlbumListController',function($scope,albumProvider,$location) {
                }
 
            }else{
-
+               $cookieStore.put('last_album_created',$scope.new_album.album_name);
                $location.path("/albums/"+new_album.name);
            }
 

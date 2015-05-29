@@ -1,0 +1,25 @@
+<div class="new_album panel panel-default">
+    <form name="new_album_form" novalidate>
+        <div class="alert alert-danger" role="alert" ng-show="add_album_error">
+            {{add_album_error}}
+        </div>
+        <div class="panel-heading">
+            <input type="text" placeholder="Title..." ng-model="new_album.title"/>
+            <div style="float: right">
+                <input name="date"  type="text" placeholder="yyyy-mm-dd" ng-model="new_album.date "/>
+            </div>
+
+
+        </div>
+        <div class="panel-body">
+            <p>
+                <textarea ng-model="new_album.description" placeholder="Description..." rows='4' style="width: 100%"></textarea>
+            </p>
+            <p>
+                <input type="text" ng-model="new_album.name"  style="width: 100%"/>
+            </p>
+            <button ng-click="addAlbum(new_album)" type="button" class="btn btn-success">Add New Album</button>
+
+        </div>
+    </form>
+</div>

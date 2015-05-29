@@ -16,8 +16,7 @@
         <div class="col-sm-6 col-md-4" ng-repeat="photo in photos">
             <div class="thumbnail">
                 <a href="index.html#/albums/{{album_name}}/photos/{{photo.filename}}" class="thumbnail">
-
-                    <img src="/media/{{album_name}}/thumb/{{photo.filename}}"/>
+                    <img src="/media/{{album_name}}/thumb/{{photo.filename}}" class="img-circle"/>
                 </a>
                 <div class="caption">
                     <h3>{{photo.description}}</h3>
